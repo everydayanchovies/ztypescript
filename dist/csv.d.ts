@@ -1,3 +1,3 @@
-export declare function columnsForRawCsvLine(line: String): Array<String>;
-export declare function headerForCsvFile(file: File): Promise<Array<String> | null>;
-export declare function rowsForCsvFile(file: File): Promise<Array<Array<String>>>;
+export declare function columnsForRawCsvLine(line: string): Array<string>;
+export declare function headerForCsvFile(file: File): Promise<Array<string> | null>;
+export declare function rowsForCsvFile(file: File): Promise<Array<Array<string>>>;

@@ -1,4 +1,4 @@
-export function filenameForFile(file: File, stripExtension = true): String {
+export function filenameForFile(file: File, stripExtension = true): string {
     if (stripExtension && file.name.includes("."))
         return file.name
             .split('.')
@@ -8,7 +8,7 @@ export function filenameForFile(file: File, stripExtension = true): String {
     return file.name;
 }
 
-export function linesForFile(file: File): Promise<Array<String>> {
+export function linesForFile(file: File): Promise<Array<string>> {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
 
