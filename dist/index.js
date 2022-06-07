@@ -1,5 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.filenameForFile = void 0;
+exports.rowsForCsvFile = exports.headerForCsvFile = exports.columnsForRawCsvLine = exports.linesForFile = exports.filenameForFile = void 0;
 var files_1 = require("./files");
 Object.defineProperty(exports, "filenameForFile", { enumerable: true, get: function () { return files_1.filenameForFile; } });
+Object.defineProperty(exports, "linesForFile", { enumerable: true, get: function () { return files_1.linesForFile; } });
+var csv_1 = require("./csv");
+Object.defineProperty(exports, "columnsForRawCsvLine", { enumerable: true, get: function () { return csv_1.columnsForRawCsvLine; } });
+Object.defineProperty(exports, "headerForCsvFile", { enumerable: true, get: function () { return csv_1.headerForCsvFile; } });
+Object.defineProperty(exports, "rowsForCsvFile", { enumerable: true, get: function () { return csv_1.rowsForCsvFile; } });
