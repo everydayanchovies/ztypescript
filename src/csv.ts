@@ -20,5 +20,5 @@ export async function rowsForCsvFile(file: File): Promise<Array<Array<String>>> 
 
     return textRows
         .slice(1)
-        .map(this.columnsForRawCsvLine)
+        .map(columnsForRawCsvLine)
 }
