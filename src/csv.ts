@@ -1,4 +1,4 @@
-export { linesForFile } from "./files";
+import { linesForFile } from "./files";
 
 export function columnsForRawCsvLine(line: String): Array<String> {
     const delim = line.includes(';') ? ';' : ',';
@@ -6,15 +6,15 @@ export function columnsForRawCsvLine(line: String): Array<String> {
 }
 
 export async function headerForCsvFile(file: File): Promise<Array<String> | null> {
-    const textRows = await this.linesForFile(file);
+    const textRows = await linesForFile(file);
     if (!textRows)
         return null;
 
-    return this.columnsForRawCsvLine(textRows[0]);
+    return columnsForRawCsvLine(textRows[0]);
 }
 
 export async function rowsForCsvFile(file: File): Promise<Array<Array<String>>> {
-    const textRows = await this.linesForFile(file);
+    const textRows = await linesForFile(file);
     if (textRows.length <= 1)
         return [];
 

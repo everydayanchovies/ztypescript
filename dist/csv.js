@@ -9,9 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.rowsForCsvFile = exports.headerForCsvFile = exports.columnsForRawCsvLine = exports.linesForFile = void 0;
-var files_1 = require("./files");
-Object.defineProperty(exports, "linesForFile", { enumerable: true, get: function () { return files_1.linesForFile; } });
+exports.rowsForCsvFile = exports.headerForCsvFile = exports.columnsForRawCsvLine = void 0;
+const files_1 = require("./files");
 function columnsForRawCsvLine(line) {
     const delim = line.includes(';') ? ';' : ',';
     return line.split(delim);
@@ -19,16 +18,16 @@ function columnsForRawCsvLine(line) {
 exports.columnsForRawCsvLine = columnsForRawCsvLine;
 function headerForCsvFile(file) {
     return __awaiter(this, void 0, void 0, function* () {
-        const textRows = yield this.linesForFile(file);
+        const textRows = yield (0, files_1.linesForFile)(file);
         if (!textRows)
             return null;
-        return this.columnsForRawCsvLine(textRows[0]);
+        return columnsForRawCsvLine(textRows[0]);
     });
 }
 exports.headerForCsvFile = headerForCsvFile;
 function rowsForCsvFile(file) {
     return __awaiter(this, void 0, void 0, function* () {
-        const textRows = yield this.linesForFile(file);
+        const textRows = yield (0, files_1.linesForFile)(file);
         if (textRows.length <= 1)
             return [];
         return textRows
