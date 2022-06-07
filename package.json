@@ -1,0 +1,12 @@
+{
+  "name": "ztypescript",
+  "description": "Collection of handy functions for the language typescript.",
+  "version": "1.0.0",
+  "author": "Max Marshall <max@zmarshall.nl>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ]
+}
