@@ -32,7 +32,7 @@ function rowsForCsvFile(file) {
             return [];
         return textRows
             .slice(1)
-            .map(this.columnsForRawCsvLine);
+            .map(columnsForRawCsvLine);
     });
 }
 exports.rowsForCsvFile = rowsForCsvFile;
